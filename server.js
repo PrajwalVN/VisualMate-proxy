@@ -6,6 +6,9 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+app.get("/", (req,res)=>{
+  res.send("server running")
+})
 // Project Generation (uses PROJECT key)
 app.post("/groq/project", async (req, res) => {
   try {
